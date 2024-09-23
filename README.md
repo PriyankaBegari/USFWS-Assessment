@@ -56,7 +56,8 @@ I have added 6 tests in the LongestPathTest class. You can run the tests using t
 ## 1. Does the solution work for larger graphs?
 - Yes, it works for larger graphs as the space and time complexity of my algorithm just scale linearly with the size of the graph.  
 ## 2. Can you think of any optimizations?
-- One optimization I can think of is in the case of multiple components within the graph if we have some identifiable information like a field in the Vertex class that corresponds to distinct components in the graph then we can first separate out the individual components first and find the longest component in the component containing the source vertex reducing the need to travel over all the edges of the graph. 
+- One optimization I can think of is we don't actually need the whole topological ordering. We can just do DFS starting at the given vertex and get the topological ordering of only the vertices reachable from the given vertex as we are looking for only the longest path starting at the given vertex. Then, the rest of the procedure remains the same.
+- Another optimization I can think of is in the case of multiple components within the graph if we have some identifiable information like a field in the Vertex class that directly corresponds to distinct components in the graph then we can separate out the individual components first and find the longest component in the component containing the source vertex reducing the need to travel over all the edges of the graph.
 ## 3. What’s the computational complexity of your solution?
 - As explained in the "Time and Space Complexity" section above, both my space and time complexities are O(V+E).
 ## 4. Are there any unusual cases that aren't handled?
