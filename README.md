@@ -1,5 +1,5 @@
 
-## Task
+# Task
 
 Given a DAG (Directed Acyclic Graph) and a vertex, we need to calculate the longest directed path from that vertex.
 
@@ -27,7 +27,7 @@ Note: There can be multiple longest paths, all of the same length starting at a 
 
 ## Time and Space Complexity
 
-## 1. Time Complexity
+### 1. Time Complexity
 
 - **Topological Sorting**: The DFS to compute topological sorting takes `O(V + E)` time, where `V` is the number of vertices and `E` is the number of edges in the graph.
 
@@ -36,7 +36,7 @@ Note: There can be multiple longest paths, all of the same length starting at a 
 Thus, the overall time complexity is: **O(V + E)**
 
 
-## 2. Space Complexity
+### 2. Space Complexity
 
 - **Graph Representation**: We store the graph using adjacency lists, which takes `O(V + E)` space.
 
@@ -46,8 +46,18 @@ Thus, the overall time complexity is: **O(V + E)**
 
 Thus, the overall space complexity is: **O(V + E)**
 
-### Running the Tests
+## Running the Tests
 
-I have added 6 tests in the LongestPathTest.java file. You can run the tests using the below command:
+I have added 6 tests in the LongestPathTest class. You can run the tests using the below command:
 
 `mvn test`
+
+# Questions
+## 1. Does the solution work for larger graphs?
+- Yes, it works for larger graphs as the space and time complexity of my algorithm just scale linearly with the size of the graph.  
+## 2. Can you think of any optimizations?
+- One optimization I can think of is in the case of multiple components within the graph if we have some identifiable information like a field in the Vertex class that corresponds to distinct components in the graph then we can first separate out the individual components first and find the longest component in the component containing the source vertex reducing the need to travel over all the edges of the graph. 
+## 3. What’s the computational complexity of your solution?
+- As explained in the "Time and Space Complexity" section above, both my space and time complexities are O(V+E).
+## 4. Are there any unusual cases that aren't handled?
+- I wrote my code thinking exhaustively through all the cases. The only assumption I made was the given graph is a DAG which is given in the problem statement. Instead of that, we can also add an additional subroutine to check whether the given graph is a DAG or not and inform the user about that. 
