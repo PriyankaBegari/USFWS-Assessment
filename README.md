@@ -52,7 +52,21 @@ I have added 6 tests in the LongestPathTest class. You can run the tests using t
 
 `mvn test`
 
-# Questions
+# Questions based on understanding the problem statement and approach.
+## 1. Did you fully read and understand the problem requirements?
+    - Yes,I thoroughly understood the problem
+## 2. Did you write and run tests? 
+    -  Yes, I did. And added all the possible test cases.
+## 3. Did you check for edge cases? 
+    - Yes, I did. My test cases include a graph with no edges, another one with disconnected components, star graph, and a binary tree graph.
+## 4. Did you fully consider performance? Efficiency? Scalability? 
+    - Yes, I've implemented it with O (V +E) time and space complexity which are the optimal computational complexities for the given problem. I have also made it very scalable by structuring it into separate Vertex, Edge and Graph classes. This allows us to add any new functionalities that we want to add to the Graph class e.g., the problem of finding the shortest path between two nodes which BFS, or we can also add a weight field to the Edge class and setup a Dijkstra's algorithm in the Graph class to find a path with minimum sum of weights.
+## 5. Did you answer the questions at the bottom of the explanation? 
+    -  yes, I answered them and included them in the file
+## 6. Are you prepared to discuss your work if you are asked to participate in the interview process?
+    - Yes, I am eager to discuss about this in the interview.
+
+# Questions to be answered along with coding exercise:
 ## 1. Does the solution work for larger graphs?
 - Yes, it works for larger graphs as the space and time complexity of my algorithm just scale linearly with the size of the graph.  
 ## 2. Can you think of any optimizations?
